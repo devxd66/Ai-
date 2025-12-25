@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mobile Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white font-sans">
+    <div class="max-w-md mx-auto p-6">
+        <header class="text-center py-8">
+            <h1 class="text-3xl font-bold text-blue-500">AI Creator</h1>
+            <p class="text-gray-400 mt-2">Credits: <span id="creditCount" class="text-yellow-500 font-mono">10</span></p>
+        </header>
+
+        <div class="space-y-4">
+            <textarea id="userInput" placeholder="Type your prompt here..." 
+                class="w-full bg-gray-900 border border-gray-800 rounded-xl p-4 focus:ring-2 focus:ring-blue-600 outline-none h-32"></textarea>
+            
+            <div class="grid grid-cols-2 gap-3">
+                <button onclick="handleAI('text')" class="bg-gray-800 hover:bg-gray-700 py-3 rounded-xl font-semibold">Generate Text</button>
+                <button onclick="handleAI('image')" class="bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-semibold text-white">Generate Image</button>
+            </div>
+        </div>
+
+        <div id="outputBox" class="mt-8 p-4 bg-gray-900 rounded-2xl min-h-[200px] border border-gray-800 flex items-center justify-center text-gray-500 italic">
+            Your creation will appear here...
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
